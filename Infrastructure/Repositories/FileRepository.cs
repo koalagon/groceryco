@@ -14,11 +14,11 @@ namespace Infrastructure.Repositories
 {
     public class FileRepository<T> : IRepository<T> where T : class
     {
-        readonly string filePath;
+        List<T> list;
 
         public FileRepository(string filePath)
         {
-            this.filePath = filePath;  
+            this.list = JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(filePath));
         }
 
         public void Insert(T entity)
@@ -48,21 +48,14 @@ namespace Infrastructure.Repositories
 
         public IEnumerable<T> GetAll()
         {
-            var list = JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(filePath));
-            if (list == null)
-                return new List<T>();
-            else
-                return list;
+            return list;
         }
 
         public T GetById(string id)
         {
-            T obj = GetAll().SingleOrDefault(x => (string)x.GetType().GetProperty("Id").GetValue(x) == id);
+            T obj = list.SingleOrDefault(x => (string)x.GetType().GetProperty("Id").GetValue(x) == id);
 
-            if (obj == null)
-                throw new ProductException("No product is found.");
-            else
-                return obj;
+            return obj;
         }
     }
 }

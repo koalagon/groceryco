@@ -41,6 +41,9 @@ namespace Domain.Services
         public void AddProduct(string productId)
         {
             var product = productRepository.GetById(productId);
+            if (product == null)
+                throw new ProductException("There's a product(s) which is not registered in the catalog.");
+
             sale.AddProduct(product);            
         }
 

@@ -57,6 +57,10 @@
     <Compile Include="Models\Promotions\LowestPricingStrategy.cs" />
     <Compile Include="Models\Promotions\PricingStrategyFactory.cs" />
     <Compile Include="Models\Sales\Receipt.cs" />
+    <Compile Include="Models\Validators\IPromotionValidator.cs" />
+    <Compile Include="Models\Validators\GroupSalePromotionValidator.cs" />
+    <Compile Include="Models\Validators\AdditionalSalePromotionValidator.cs" />
+    <Compile Include="Models\Validators\OnSalePromotionValidator.cs" />
     <Compile Include="Services\ISaleService.cs" />
     <Compile Include="Models\Sales\ConsoleReceiptPrinter.cs" />
     <Compile Include="Models\Sales\ReceiptPrinter.cs" />

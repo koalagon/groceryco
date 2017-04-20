@@ -10,6 +10,28 @@ namespace UnitTest.ObjectTests
     [TestClass]
     public class SaleObjectUnitTest
     {
+
+        [TestMethod]
+        public void Add_Product()
+        {
+            //Arrange
+            Sale sale = new Sale();
+            sale.AddProduct(new Product() { Id = "Apple", Price = 0.75m });
+            sale.AddProduct(new Product() { Id = "Banana", Price = 1.00m });
+            sale.AddProduct(new Product() { Id = "Orange", Price = 1.50m });
+            sale.AddProduct(new Product() { Id = "Banana", Price = 1.00m });
+            sale.AddProduct(new Product() { Id = "Orange", Price = 1.50m });
+            sale.AddProduct(new Product() { Id = "Orange", Price = 1.50m });
+
+            //Act
+            var salesLineItem = sale.GetSaleLineItems();
+
+            //Assert
+            Assert.AreEqual(1, salesLineItem.Single(x => x.Product.Id == "Apple").Quantity);
+            Assert.AreEqual(2, salesLineItem.Single(x => x.Product.Id == "Banana").Quantity);
+            Assert.AreEqual(3, salesLineItem.Single(x => x.Product.Id == "Orange").Quantity);
+        }
+
         [TestMethod]
         public void Get_Regular_Total()
         {
