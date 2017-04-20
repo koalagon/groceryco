@@ -47,7 +47,7 @@ namespace Domain.Services
 
 
         /// <summary>
-        /// Return final sale object
+        /// Apply promotions and create receipt
         /// </summary>
         /// <returns></returns>
         public Receipt GetReceipt()
