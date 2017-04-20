@@ -30,7 +30,10 @@ namespace Domain.Models.Promotions
 
         public override decimal GetSubTotal(SaleLineItem item)
         {
-            return CalculateNoDiscount(item) + CalculateDiscount(item);
+            if (item.Quantity > BuyQuantity)
+                return CalculateNoDiscount(item) + CalculateDiscount(item);
+            else
+                return item.Quantity * item.Product.Price;
         }
 
 

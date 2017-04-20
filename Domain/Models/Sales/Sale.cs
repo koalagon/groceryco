@@ -69,7 +69,7 @@ namespace Domain.Models.Sales
 
         
         /// <summary>
-        /// Return total payment (Regular price - promotion)
+        /// Calculate all price information and return receipt class
         /// </summary>
         /// <returns></returns>
         public Receipt CreateReceipt()
