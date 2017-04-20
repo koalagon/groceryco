@@ -1,0 +1,4 @@
+﻿[
+    { "id": "Banana", "groupQuantity": 2, "groupPrice": 1.30, "startDate": "2017-01-01 00:00:00", "endDate": "2017-12-31 23:59:59", "description": "Banana $1.3 for 2" },
+    { "id": "Apple", "groupQuantity": 3, "groupPrice": 2.00, "startDate": "2017-01-01 00:00:00", "endDate":  "2017-12-31 23:59:59", "description": "Apple $2 for 3" }
+]

@@ -1,0 +1,4 @@
+﻿[
+    { "id": "Apple", "onSalePrice": 0.6, "startDate": "2017-01-01 00:00:00", "endDate": "2017-12-31 23:59:59", "description": "Apple $0.6" },
+    { "id": "Banana", "onSalePrice": 0.8, "startDate": "2017-01-01 00:00:00", "endDate":  "2017-12-31 23:59:59", "description": "Banana $0.8" }
+]
