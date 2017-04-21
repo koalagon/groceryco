@@ -11,8 +11,8 @@ This program reads all json file with relative path. So, you should run the prog
 - Domain : domain model, services implements all business logics
   * Models : all entities, VO
   * Repositories : generic repository
-  * Services : servcie layer facade
-- Infrastructure : code that implements an interface
+  * Services : service layer facade
+- Infrastructure : code has dependency on external environments. this layer implements an domain interface.
 
 # Business Logic & Design choice
 
