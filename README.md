@@ -20,6 +20,10 @@ This program reads all json file with relative path. So, you should run the prog
 - Strategy pattern and factory pattern is used to determin pricing policy. **If there's multiple promotions, e.g. on-sale and group-sale per product, the application will choose the lowest price strategy as a default.** This strategy can be changed from App.Config file for simplicity.
 - I didn't use DI framework, but it could be used from Kiosk application. So IRepository and ISaleService implementation can be injected.
 
+![domain model](http://ec2-35-163-38-171.us-west-2.compute.amazonaws.com:3000/images/model1.png)
+![sequence add product](http://ec2-35-163-38-171.us-west-2.compute.amazonaws.com:3000/images/model2.png)
+![sequence check out](http://ec2-35-163-38-171.us-west-2.compute.amazonaws.com:3000/images/model3.png)
+
 # Assumption & Limitation
 - Product price, sub-total, grand-total are between decimal.MinValue and decimal.MaxValue
 - Product name is Unique Identifier. (Of course, it is not good idea, but it's for readability). The product name is case-sensitive.
