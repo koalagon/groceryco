@@ -21,7 +21,7 @@ This program reads all json file with relative path. So, you should run the prog
 - Product price, sub-total, grand-total are between decimal.MinValue and decimal.MaxValue
 - Each product can have multiple promotions. e.g. Apple can have the on-sale promotion and group-sale promotion. But, system will gurantee the lowest price promotion. It can be changed to the highest price promotion based on configuration. You can change the configuration on App.Config file.
 - Each product can have a lot of promotions on each promomtion type. But the promotion date should not overlay.
-- All data which marketing team is correct. However, I added a couple of validation logics.
+- All marketing team input data is correct. However, I added a couple of validation logics.
 - All input file should be provided in the right place. If not, system will say error message.
 
 # NuGet
