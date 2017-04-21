@@ -20,6 +20,7 @@ This program reads all json file with relative path. So, you should run the prog
 
 # Assumption & Limitation
 - Product price, sub-total, grand-total are between decimal.MinValue and decimal.MaxValue
+- Product name is Unique Identifier. (Of course, it is not good idea, but it's for readability). The product name is case-sensitive.
 - Each product can have multiple promotions. e.g. Apple can have the on-sale promotion and group-sale promotion. But, system will gurantee the lowest price promotion. It can be changed to the highest price promotion based on configuration. You can change the configuration on App.Config file.
 - Each product can have a lot of promotions on each promomtion type. But the promotion date should not overlay.
 - All marketing team input data is correct. However, I added a couple of validation logics.
