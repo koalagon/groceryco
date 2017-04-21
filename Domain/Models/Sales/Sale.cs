@@ -93,7 +93,7 @@ namespace Domain.Models.Sales
 
 
         /// <summary>
-        /// Get best offer total
+        /// Get best offer promotions
         /// </summary>
         /// <returns></returns>
         protected ICollection<AppliedPromotion> CalculatePromotions()
@@ -102,7 +102,7 @@ namespace Domain.Models.Sales
 
             foreach (var saleLineItem in saleLineItems)
             {
-                IPricingStrategy pricingStrategy = PricingStrategyFactory.NewInstance().CreateStrategy(ConfigurationManager.AppSettings["pricingStrategy"]);            
+                IPricingStrategy pricingStrategy = PricingStrategyFactory.NewInstance().CreateStrategy();            
                 IEnumerable<Promotion> promotions = availablePromotions.Where(x => x.Id == saleLineItem.Product.Id);
                 foreach (Promotion promotion in promotions)
                     pricingStrategy.ApplyPromotion(promotion);

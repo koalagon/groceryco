@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,8 +25,10 @@ namespace Domain.Models.Promotions
         }
 
 
-        public IPricingStrategy CreateStrategy(string strategyType)
+        public IPricingStrategy CreateStrategy()
         {
+            string strategyType = ConfigurationManager.AppSettings["pricingStrategy"];
+
             switch (strategyType)
             {
                 case "highest":
