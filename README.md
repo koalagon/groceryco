@@ -2,8 +2,7 @@
 This program reads all json file with relative path. So, you should run the program in VS or run it directly in the folder which exe file resides. 
 
 # Prerequisite
-- VS2013 or higher version
-- .NET 4.0 or higher version
+- .NET 4.0 or higher version (I used VS2013 for this project)
 
 # Architecture & Project structure
 - I follow Onion Architecture. You could see the onion architecture from http://jeffreypalermo.com/blog/the-onion-architecture-part-1/
