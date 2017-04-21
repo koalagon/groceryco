@@ -1,5 +1,5 @@
-# GroceryCo
-AbsorbLMS coding practice
+# Running program
+This program reads all json file with relative path. So, you should run the program in VS or run it directly in the folder which exe file resides. 
 
 # Prerequisite
 - VS2013 or higher version
