@@ -5,7 +5,7 @@ This program reads all json file with relative path. So, you should run the prog
 - .NET 4.0 or higher version (I used VS2013 for this project)
 
 # Architecture & Project structure
-- I followed Onion Architecture. http://jeffreypalermo.com/blog/the-onion-architecture-part-1/
+- I followed Onion Architecture. I always use this layer pattern. http://jeffreypalermo.com/blog/the-onion-architecture-part-1/
 - Kiosk : presentation layer. 
 - Domain : domain model, services implements all business logics
   * Models : all entities, VO
