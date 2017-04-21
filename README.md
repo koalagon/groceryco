@@ -15,7 +15,9 @@ This program reads all json file with relative path. So, you should run the prog
 - Infrastructure : code has dependency on external environments. this layer implements an domain interface.
 
 # Business Logic & Design choice
-
+- I found all domain model. Based on the domain model, I desigend and implemented all source codes.
+- Repository pattern is used to access data. Because I used generic repository interface and all basic concrete classes are created, the data storage can be easily changed from file system to DB or REST server.
+- Strategy pattern and factory pattern is used to determin pricing policy. If there's multiple promotions, e.g. on-sale and group-sale, the application will choose the lowest price strategy as a default. This strategy can be changed from App.Config file.
 
 # Assumption & Limitation
 - Product price, sub-total, grand-total are between decimal.MinValue and decimal.MaxValue
