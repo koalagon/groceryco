@@ -74,8 +74,8 @@ namespace Domain.Models.Sales
         /// <returns></returns>
         public Receipt CreateReceipt()
         {
-            var promotionResults = CalculatePromotions();
-            Receipt receipt = new Receipt(saleLineItems, promotionResults);
+            var chosenPromotions = ChoosePromotions();
+            Receipt receipt = new Receipt(saleLineItems, chosenPromotions);
 
             return receipt;
         }
@@ -96,7 +96,7 @@ namespace Domain.Models.Sales
         /// Get best offer promotions
         /// </summary>
         /// <returns></returns>
-        protected ICollection<AppliedPromotion> CalculatePromotions()
+        protected ICollection<AppliedPromotion> ChoosePromotions()
         {
             ICollection<AppliedPromotion> appliedPromotions = new HashSet<AppliedPromotion>();
 

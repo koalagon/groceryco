@@ -40,7 +40,7 @@ namespace Domain.Models.Sales
         {
             Console.WriteLine("========================   GroceryCo Promotion List   ========================");
 
-            Console.WriteLine(string.Format("{0}{1}{2}{3}", "Promotion".PadRight(29), "Regular Price".PadRight(20), "Discount Price".PadRight(20), "Saved"));
+            Console.WriteLine(string.Format("{0}{1}{2}{3}", "Promotion".PadRight(29), "Regular Price".PadRight(20), "Discounted Price".PadRight(20), "Saved"));
             var appliedPromotions = receipt.GetAppliedPromotions();
 
             foreach (var appliedPromotion in appliedPromotions)
