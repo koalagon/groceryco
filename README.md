@@ -27,6 +27,7 @@ This program reads all json files with the relative path. So, you should run the
 # Assumption & Limitation
 - Product price, sub-total, and grand-total are between decimal.MinValue and decimal.MaxValue
 - Product name is Unique Identifier. (Typically, this is not the best practice but was selected for readability). The product name is case-sensitive.
+- I assumed that there's a only console receipt printer. If there's more printer types, other type printers inherit Receipt class. Also, the printing function will be moved to the domain service layer facade, and printing facade method can be provided.
 - Each product can have multiple promotions. For example, Apple can have an on-sale promotion and group-sale promotion. But, system will gurantee the lowest price promotion. It can be changed to the highest price promotion based on the configuration. You can change the configuration in the App.Config file.
 - Each product can have a lot of promotions on each promomtion type. But the promotion date should not overlay.
 - All marketing team input data is correct. However, I added a couple of validation logics.
